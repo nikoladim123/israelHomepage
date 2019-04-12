@@ -126,7 +126,7 @@ nav .fa, .fas{
 }
 .ProductsSrvicesMegaMenu p{
   font-size: 1vw;
-  margin-right: 1vw;
+  /* margin-right: 1vw; */
 }
 .megaMenuRanking{
   width: 7.0527vw;
@@ -156,6 +156,9 @@ nav .fa, .fas{
   display: flex;
   align-items: flex-end;
 }
+.product a{
+  width: 100%;
+}
 .product img{
   width: 100%;
   transition: 0.15s;
@@ -176,6 +179,9 @@ nav .fa, .fas{
   height: 3.71vw;
   align-items: center;
   justify-content: space-around;
+}
+.MMcardButton p{
+  margin-right: 1vw;
 }
 .MMcardButton:hover{
   cursor: pointer;
