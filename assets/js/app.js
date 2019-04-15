@@ -50,20 +50,26 @@ var ProductsSrvicesMegaMenu = document.getElementsByClassName('ProductsSrvicesMe
 // mega menu ladning page
 // mega menu ladning page
 // mega menu ladning page
-prodMegaBox.addEventListener('mouseenter',prodMegaBoxFunIn);
-function prodMegaBoxFunIn() {
-  ProductsSrvicesMegaMenu.style.height = "calc(100vh - 6vw)";
-  prodMegaBox.removeEventListener('mouseenter',prodMegaBoxFunIn);
+var prodMegaBoxMod = 2;
+
+MoreDevices.addEventListener('click',megaMenuFun);
+//
+// MoreDevices.addEventListener('click',()=>{
+//   if (prodMegaBoxMod % 2 === 1) {
+//     ProductsSrvicesMegaMenu.style.height = "0";
+//     prodMegaBoxMod++;
+//     console.log(2);
+//   }
+// });
+
+function megaMenuFun() {
+  if (prodMegaBoxMod % 2 === 0) {
+    ProductsSrvicesMegaMenu.style.height = "calc(100vh - 6vw)";
+  }else{
+    ProductsSrvicesMegaMenu.style.height = "0";
+  }
+  prodMegaBoxMod++;
 }
-
-prodMegaBox.addEventListener('mouseleave',()=>{
-  ProductsSrvicesMegaMenu.style.height = "0";
-  prodMegaBox.addEventListener('mouseenter',prodMegaBoxFunIn);
-});
-
-prodMegaBox.addEventListener('click',()=>{
-  ProductsSrvicesMegaMenu.style.height = "0";
-})
 
 
 // more devices Hover Effect
