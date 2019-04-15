@@ -50,13 +50,20 @@ var ProductsSrvicesMegaMenu = document.getElementsByClassName('ProductsSrvicesMe
 // mega menu ladning page
 // mega menu ladning page
 // mega menu ladning page
-prodMegaBox.addEventListener('mouseenter',()=>{
+prodMegaBox.addEventListener('mouseenter',prodMegaBoxFunIn);
+function prodMegaBoxFunIn() {
   ProductsSrvicesMegaMenu.style.height = "calc(100vh - 6vw)";
-});
+  prodMegaBox.removeEventListener('mouseenter',prodMegaBoxFunIn);
+}
 
 prodMegaBox.addEventListener('mouseleave',()=>{
   ProductsSrvicesMegaMenu.style.height = "0";
+  prodMegaBox.addEventListener('mouseenter',prodMegaBoxFunIn);
 });
+
+prodMegaBox.addEventListener('click',()=>{
+  ProductsSrvicesMegaMenu.style.height = "0";
+})
 
 
 // more devices Hover Effect
