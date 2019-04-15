@@ -43,6 +43,20 @@ var spanPalnID = document.getElementById('spanPalnID');
   // MoreDevices
 var simCardContainer = document.getElementsByClassName('simCardContainer')[0];
 var MoreDevices = document.getElementById('MoreDevices');
+  // megamenu
+var prodMegaBox = document.getElementsByClassName('prodMegaBox')[0];
+var ProductsSrvicesMegaMenu = document.getElementsByClassName('ProductsSrvicesMegaMenu')[0];
+
+// mega menu ladning page
+// mega menu ladning page
+// mega menu ladning page
+prodMegaBox.addEventListener('mouseenter',()=>{
+  ProductsSrvicesMegaMenu.style.height = "calc(100vh - 6vw)";
+});
+
+prodMegaBox.addEventListener('mouseleave',()=>{
+  ProductsSrvicesMegaMenu.style.height = "0";
+});
 
 
 // more devices Hover Effect
